@@ -6,6 +6,10 @@ export class Home {
   private rooms: number = 0;
   private windows: number = 0;
   private doors: number = 0;
+  private pscina: boolean = false;
+  private garage: boolean = false;
+  private garden: boolean = false;
+  private partySaloon: boolean = false;
 
   public setColor(color: string): void {
     this.color = color;
@@ -30,5 +34,21 @@ export class Home {
 
   public setDoors(doors: number): void {
     this.doors = doors;
+  }
+
+  public setPscina(b: boolean): void {
+    this.pscina = b;
+  }
+  
+  public setGarage(b: boolean): void {
+    this.garage = b;
+  }
+  
+  public setPartySaloon(b: boolean): void {
+    this.partySaloon = b;
+  }
+  
+  public setGarden(b: boolean): void {
+    this.garden = b;
   }
 }

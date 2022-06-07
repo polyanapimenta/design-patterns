@@ -6,4 +6,8 @@ export interface HomeInterfaceBuilder {
   produceRooms(rooms: number): void;
   produceWindows(windows: number): void;
   produceDoors(doors: number): void;
+  producePscina(b: boolean): void;
+  produceGarden(b: boolean): void;
+  produceGarage(b: boolean): void;
+  producePartySaloon(b: boolean): void;
 }

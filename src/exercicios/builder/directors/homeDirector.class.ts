@@ -25,6 +25,7 @@ export class HomeDirector {
     this.builder.produceRooms(8);
     this.builder.produceWindows(10);
     this.builder.produceDoors(7);
+    this.builder.producePartySaloon(true);
   }
 
   public buildMansion(): void {
@@ -35,5 +36,9 @@ export class HomeDirector {
     this.builder.produceRooms(20);
     this.builder.produceWindows(24);
     this.builder.produceDoors(18);
+    this.builder.producePscina(true);
+    this.builder.produceGarage(true);
+    this.builder.produceGarden(true);
+    this.builder.producePartySaloon(true);
   }
 }

@@ -7,6 +7,8 @@ function clientCode(director: HomeDirector) {
 
   console.log("Comprando um terreno..\n\nIniciando construções..");
   director.buildHouse();
+  // director.buildMansion();
+  // director.buildApartment();
   console.log(builder.getProduct());
 }
 
