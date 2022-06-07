@@ -1,5 +1,6 @@
 import { run as abstractFactoryRun} from "./src/abstract-factory/clientCode";
 import { run as builderRun} from "./src/builder/clientCode";
+import { run as singletonRun } from "./src/singleton/clientCode";
 
 const readline = require('readline').createInterface({
   input: process.stdin,
@@ -32,6 +33,7 @@ readline.question(`
         break;
       case '5':
         console.log('\nExecutando Singleton');
+        singletonRun();
       break;
     default:
       console.log("\nOpção Invalida");
