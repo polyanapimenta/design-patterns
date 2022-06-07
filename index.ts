@@ -1,7 +1,6 @@
-import abstractFactoryRun from "./src/abstract-factory/run";
-import abstractFactoryExRun from './src/exercicios/abstract-factory/clientCode';  
-import { ModernFactory } from "./src/exercicios/abstract-factory/factories/concrete/modernFactory.class";
-import { VintageFactory } from "./src/exercicios/abstract-factory/factories/concrete/vintageFactory.class";
+import { run as abstractFactoryRun} from "./src/abstract-factory/clientCode";
+import { run as abstractFactoryExRun} from './src/exercicios/abstract-factory/clientCode';
+import { run as builderExRun} from "./src/exercicios/builder/clientCode";
 
 const readline = require('readline').createInterface({
   input: process.stdin,
@@ -13,7 +12,8 @@ readline.question(`
   \n1 - Abstract Factory
   \n2 - Builder
   \n3 - Factory Method
-  \n4 - Exercicio
+  \n4 - Exercicio Abstract Factory
+  \n5 - Exercicio Builder
   `, (opcao: any) => {
   console.log(`Opção escolhida: '${opcao}'`);
   switch(opcao) {
@@ -29,8 +29,11 @@ readline.question(`
       break;
     case '4':
       console.log('\nExecutando Exercicio Abstract Factory:\n');
-      abstractFactoryExRun(new ModernFactory(), "maracujá");
-      // abstractFactoryExRun(new VintageFactory(), "goiaba");
+      abstractFactoryExRun();
+      break;
+    case '5':
+      console.log('\nExecutando Exercicio Builder:\n');
+      builderExRun();
       break;
     default:
       console.log("\nOpção Invalida");
