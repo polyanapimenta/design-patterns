@@ -1,6 +1,5 @@
 import { run as abstractFactoryRun} from "./src/abstract-factory/clientCode";
-import { run as abstractFactoryExRun} from './src/exercicios/abstract-factory/clientCode';
-import { run as builderExRun} from "./src/exercicios/builder/clientCode";
+import { run as builderRun} from "./src/builder/clientCode";
 
 const readline = require('readline').createInterface({
   input: process.stdin,
@@ -12,8 +11,8 @@ readline.question(`
   \n1 - Abstract Factory
   \n2 - Builder
   \n3 - Factory Method
-  \n4 - Exercicio Abstract Factory
-  \n5 - Exercicio Builder
+  \n4 - Prototype
+  \n5 - Singleton
   `, (opcao: any) => {
   console.log(`Opção escolhida: '${opcao}'`);
   switch(opcao) {
@@ -22,18 +21,17 @@ readline.question(`
       abstractFactoryRun();
       break;
     case '2':
-      console.log('\nExecutando Builder');
+      console.log('\nExecutando Builder:\n');
+      builderRun();
       break;
     case '3':
-      console.log('\nExecutando Facotry Method');
+      console.log('\nExecutando Factory Method');
       break;
-    case '4':
-      console.log('\nExecutando Exercicio Abstract Factory:\n');
-      abstractFactoryExRun();
-      break;
-    case '5':
-      console.log('\nExecutando Exercicio Builder:\n');
-      builderExRun();
+      case '4':
+        console.log('\nExecutando Prototype:\n');
+        break;
+      case '5':
+        console.log('\nExecutando Singleton');
       break;
     default:
       console.log("\nOpção Invalida");
