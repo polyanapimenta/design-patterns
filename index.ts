@@ -1,7 +1,8 @@
-import { run as abstractFactoryRun} from "./src/abstract-factory/clientCode";
-import { run as builderRun} from "./src/builder/clientCode";
+import { run as abstractFactoryRun } from "./src/abstract-factory/clientCode";
+import { run as builderRun } from "./src/builder/clientCode";
 import { run as singletonRun } from "./src/singleton/clientCode";
 import { run as prototypeRun } from "./src/prototype/clientCode";
+import { run as factoryRun } from "./src/factory-method/clientCode";
 
 const readline = require('readline').createInterface({
   input: process.stdin,
@@ -17,7 +18,7 @@ readline.question(`
   \n5 - Singleton
   `, (opcao: any) => {
   console.log(`Opção escolhida: '${opcao}'`);
-  switch(opcao) {
+  switch (opcao) {
     case '1':
       console.log('\nExecutando Abstract Factory');
       abstractFactoryRun();
@@ -28,14 +29,15 @@ readline.question(`
       break;
     case '3':
       console.log('\nExecutando Factory Method');
+      factoryRun();
       break;
-      case '4':
-        console.log('\nExecutando Prototype:\n');
-        prototypeRun();
-        break;
-      case '5':
-        console.log('\nExecutando Singleton');
-        singletonRun();
+    case '4':
+      console.log('\nExecutando Prototype:\n');
+      prototypeRun();
+      break;
+    case '5':
+      console.log('\nExecutando Singleton');
+      singletonRun();
       break;
     default:
       console.log("\nOpção Invalida");
