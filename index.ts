@@ -1,6 +1,7 @@
 import { run as abstractFactoryRun} from "./src/abstract-factory/clientCode";
 import { run as builderRun} from "./src/builder/clientCode";
 import { run as singletonRun } from "./src/singleton/clientCode";
+import { run as prototypeRun } from "./src/prototype/clientCode";
 
 const readline = require('readline').createInterface({
   input: process.stdin,
@@ -30,6 +31,7 @@ readline.question(`
       break;
       case '4':
         console.log('\nExecutando Prototype:\n');
+        prototypeRun();
         break;
       case '5':
         console.log('\nExecutando Singleton');
